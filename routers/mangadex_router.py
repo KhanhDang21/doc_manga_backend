@@ -67,7 +67,7 @@ async def fetch_chapter(chapter_id: str):
 @router.get("/cover")
 async def fetch_cover(manga_id: str):
     """
-    Proxy endpoint cho cover. Truyền ?manga_id=xxx
+    Proxy endpoint cho cover. Truyền ?manga_id=x
     """
     url = f"{API_BASE_URL}/cover?manga[]={manga_id}"
     return await fetch_from_mangadex(url)
